@@ -1,0 +1,46 @@
+{
+    "version": 1,
+    "name": "Controls",
+    "maps": [
+        {
+            "name": "Dialogue",
+            "id": "babb3485-e68f-42a6-a9c2-b8b89bdd45d5",
+            "actions": [
+                {
+                    "name": "NextPhrase",
+                    "type": "Button",
+                    "id": "3a6729ca-7788-446f-903c-027cb883a98c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7225840c-274e-406b-973f-317354e5bc96",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NextPhrase",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a1cf4526-81d7-4389-8f88-f2aee7005ee9",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NextPhrase",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

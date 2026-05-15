@@ -1,0 +1,14 @@
+===begining===
+Alright… Time to get back to work. It’s only been three days since the murder of our regular customer, Zack. The police only left around lunchtime today, and they still haven’t fully solved the case. On top of that, the manager got reprimanded because most of the security cameras turned out to be fake dummies, which is why the case remains unsolved. Hopefully, he’ll take improving the bar’s security seriously in the near future. #name: Miki
+
+Since the manager decided to rebrand the bar, I need to go through the new cocktail menu he put together.
+-> tutorial
+
+=== tutorial ===
+#tutorial
+
+->first_client
+===first_client===
+...
+hihihiiii #Mike
+-> END
