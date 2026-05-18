@@ -4,6 +4,13 @@ VAR cocktail_sourness = 0
 VAR cocktail_bitterness = 0
 VAR cocktail_spiciness = 0
 VAR cocktail_ice = false
+
+VAR john_suspect = 0
+VAR rikky_suspect = 0
+VAR mikaela_suspect = 0
+VAR neutral_suspect = 0
+
+
 ===begining===
 Alright… Time to get back to work. It’s only been three days since the murder of our regular customer, Zack. The police only left around lunchtime today, and they still haven’t fully solved the case. On top of that, the manager got reprimanded because most of the security cameras turned out to be fake dummies, which is why the case remains unsolved. Hopefully, he’ll take improving the bar’s security seriously in the near future. #name: Miki
 Since the manager decided to rebrand the bar, I need to go through the new cocktail menu he put together. #name: Miki
@@ -106,7 +113,7 @@ I’ll get rid of anyone who lays eyes on what’s mine. #name: Rikky
 Well, not bad. You know how to serve a client, a man, THE man, don't you? #name: Rikky
 Yeah, sure. I'm glad that you like it, Rikky... #name:Miki
 \*today is a day of difficult people*\ #name: Miki
-How the investigation is going? Where is Zack now? #name: Miki
+How the investigation is going? Where is Zack now? #name: Rikky
 Um... Where the dead body has to be. Unfortunately, it's on hold for now due to the lack of evidence. #name: Miki
 Great. I like our department of investigation. They always do some useless shit. #name: Rikky
 Anyway, I think they do everything they can. #name: Miki
@@ -118,7 +125,7 @@ It could be worth, you know. #name: Rikky
 Next time it will be better. I can asure you. #name: Miki
 I hope so. #name: Rikky
 So, how is your life going? #name: Miki
-I'm so fed up with everything. itches here, dumb guys there. I'm surrounded by dumbasses. At least they were able to implemented new implants which can add to your sight some features. Wanna try them, huh?  #name: Rikky
+I'm so fed up with everything. Bitches here, dumb guys there. I'm surrounded by dumbasses. At least they were able to implemented new implants which can add to your sight some features. Wanna try them, huh?  #name: Rikky
 Totally understand you. I'm going to reject your offer. I have lots of things to do, so thank you for asking. #name: Miki
 ->ending_Rikky
 
@@ -149,18 +156,157 @@ Whatever you want. #name: Miki
         -> ordinary_reaction_Mikaela
 }
 ===secret_reaction_Mikaela===
+Caramba! #name: Mikaela
+That's divine. It is even better than crystals which I sell. #name: Mikaela
+Glad that you like it. That's my job - to bring joy to the people's lifes. #name: Miki
+You're good at this for sure~ #name: Mikaela
+Unrelated, but I heard that one of your clients and concurrently one of mine had died few days ago. Did he OD or what? #name:Mikaela
+I'm not really sure. However, he got shot in a head. #name:Miki
+That's kinda sad. He was spending lots of money on my goods. He was sweet as well. In every sense. #name: Mikaela
+I'm sorry for this question but could a person die because of them? #name: Miki
+You know, darling, people can die from any shit you can imagine. For example, if someone mix substances, a person would die without a doubt. #name: Mikaela
+Anyway, it is not my problem. Moreover, I'm not responsible for people's actions. #name: Mikaela
 ->ending_Mikaela
 
 ===great_reaction_Mikaela===
+Hm, hm, hm... #name: Mikaela
+Something is wrong? #name: Miki
+No, I'm just trying to figure out how you do it better with each time~ #name: Mikaela
+Thanks, Mika. #name : Miki
+I wanted to ask is it true, that my Zackie died? #name: Mikaela
+Yeah, shot in a head. #name: Miki
+You are pretty chill when you talk about it. #name: Mikaela
+Every person that have come today asked me about this... um situation. So I cannot be emotional every time I talk about it. #name: Miki
+Understandable. Oh... It was a mistake to give him those crystals in advance. I didn't got my money back. #name: Mikaela
+As it is. #name: Miki
 ->ending_Mikaela
 
 ===ordinary_reaction_Mikaela===
+Mhm... Well, Miki, usualy you do a better job than this. #name: Mikaela
+My bad, I'm still thinking about what happened that night. #name: Miki
+Yeah, poor Zackie... However, I think maybe it is a fate that I have to stop having situationships. #name:Mikaela
+You liked him though. Even if just for a bit. #name: Miki
+\*I'm not going to mention that I know that they had fucked here every time they met each other*\ #name :Miki
+Rigth, rigth. #name: Mikaela
 ->ending_Mikaela
 
 ===ending_Mikaela===
+Well, it's time to go. Thanks for today. #name: Mikaela
+So, have a great evening, darling! #name: Mikaela
+You too, Mika. #name: Miki
 ->thougth_Miki
 
 ===thougth_Miki===
+\*finally, the end of the day*\ #name: Miki
+\*I don't think that somebody will come*\ #name:Miki
+\*sound of the door opening*\ #clear_name
+\*or wil.... UGH*\
+->detective
+
+===detective===
+Good evening, miss. I'm detective and I'm responsible for investigation of a bar crime. My name is Jonhovan. #name: Johnovan
+I would like to ask you some question if you don't mind. #name: Jonhovan
+Nice to meet you, Jonhovan. #name: Miki
+It's not hard to answer, so what is the first question? #name: Miki
+Well... Before I start, I want to warn you that EVERY your word can have an impact on the case. So, first question: #name: Jonhovan
+1. Who do you think Zack had the closest relationship with among the regular customers?#name: Jonhovan
++ John
+    ~john_suspect ++
+    ->second_question
++ Rikky
+    ~rikky_suspect ++
+    ->second_question
++ Mikaela
+    ~mikaela_suspect ++
+    ->second_question
++ Nobody was close enough
+    ~neutral_suspect ++
+    ->second_question
+===second_question===
+2. Did any of the customers behave strangely? #name: Jonhovan
++ John
+    ~john_suspect ++
+    ->third_question
++ Rikky
+    ~rikky_suspect ++
+    ->third_question
++ Mikaela
+    ~mikaela_suspect ++
+    ->third_question
++ Nobody
+    ~neutral_suspect ++
+    ->third_question
+    
+===third_question===
+3. Did Zack owe anything to anyone? #name: Jonhovan
++ John
+    ~john_suspect ++
+    ->fourth_question
++ Rikky
+    ~rikky_suspect ++
+    ->fourth_question
++ Mikaela
+    ~mikaela_suspect ++
+    ->fourth_question
++ He owes nothing to anyone
+    ~neutral_suspect ++
+    ->fourth_question
+    
+===fourth_question===
+4. Do you think Zack had a bad relationship with someone?
++ John
+    ~john_suspect ++
+    ->fifth_question
++ Rikky
+    ~rikky_suspect ++
+    ->fifth_question
++ Mikaela
+    ~mikaela_suspect ++
+    ->fifth_question
++ He didn't had bad relationship with anyone
+    ~neutral_suspect ++
+    ->fifth_question
+    
+===fifth_question===
+5. Which customer seems the most suspicious?
++ John
+    ~john_suspect +=2
+    ->checking
++ Rikky
+    ~rikky_suspect +=2
+    ->checking
++ Mikaela
+    ~mikaela_suspect +=2
+    ->checking
++ I don't think that suspect is among out frequenters.
+    ~neutral_suspect +=2
+    ->checking
+    
+===checking===
+{
+    - john_suspect >= 4:
+    ->john_bad_ending
+    - rikky_suspect >= 4:
+    ->rikky_good_ending
+    - mikaela_suspect >=4:
+    ->mikaela_bad_ending
+    -else:
+    ->neutral_ending
+}
+
+===john_bad_ending===
+grgrsg
+->the_ending
+===rikky_good_ending===
+jsrh
+->the_ending
+===mikaela_bad_ending===
+rgerayhh
+->the_ending
+===neutral_ending===
+erahikifb
+->the_ending
+===the_ending===
 
 -> END
 
