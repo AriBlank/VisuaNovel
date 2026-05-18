@@ -84,6 +84,10 @@ public class ScriptsReader : MonoBehaviour
                 {
                     StartCocktailMaking();
                 }
+                if(tag.Trim() == "clear_name")
+                {
+                    CharacterName.text = "";
+                }
 
                 continue;
             }
@@ -171,9 +175,9 @@ public class ScriptsReader : MonoBehaviour
             spiciness = spiciness,
             ice = ice
         };
+        isMixing = false;
         OnCocktailServed( cocktail );
         CockPanel.SetActive(false);
-        isMixing = false;
         ResetCock();
     }
     private int GetTotalPoints()
@@ -215,10 +219,7 @@ public class ScriptsReader : MonoBehaviour
     }
     void Update()
     {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame) 
-        {
-            ShowNextLine(); 
-        }
+
     }  
 }
 
