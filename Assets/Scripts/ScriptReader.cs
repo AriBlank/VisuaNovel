@@ -47,6 +47,7 @@ public class ScriptsReader : MonoBehaviour
         CockPanel.SetActive(isMixing);
         UpdateUI();
     }
+
     public void ShowNextLine()
     {
         if (isTutorialOpen) return;
@@ -61,7 +62,6 @@ public class ScriptsReader : MonoBehaviour
         CurrentTag(story.currentTags);
         ShowOutput(line);
     }
-
     public void ShowOutput(string line)
     {
         DialogueBox.text = line;
@@ -207,6 +207,7 @@ public class ScriptsReader : MonoBehaviour
 
         ShowNextLine();
     }
+
     private void UpdateUI()
     {
         strengthCount.text = strength.ToString();
@@ -217,6 +218,7 @@ public class ScriptsReader : MonoBehaviour
         pointsCount.text = $"{GetTotalPoints()}/10";
         iceStatusText.text = ice ? "Added" : "None";
     }
+
     void Update()
     {
 

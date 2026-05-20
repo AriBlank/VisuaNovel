@@ -59,7 +59,7 @@ Well, pretty much the usual: on weekdays I deal with disgusting idiots who can�
 Well… I guess so… #name: Miki
 Money doesn’t come easy to anyone. Speaking of money, that guy Zack borrowed quite a large sum from me and never paid it back. #name: John
 Maybe fate punished him for it. I heard he borrowed money from pretty much everyone here. #name: John
- #name:Miki
+Who knows, maybe he really did make quite a few enemies who want to get his head. #name:Miki
 Exactly, that’s what I’m saying. #name: John
 -> ending_John
 
@@ -126,7 +126,7 @@ Next time it will be better. I can asure you. #name: Miki
 I hope so. #name: Rikky
 So, how is your life going? #name: Miki
 I'm so fed up with everything. Bitches here, dumb guys there. I'm surrounded by dumbasses. At least they were able to implemented new implants which can add to your sight some features. Wanna try them, huh?  #name: Rikky
-Totally understand you. I'm going to reject your offer. I have lots of things to do, so thank you for asking. #name: Miki
+Totally understand you. However, I'm going to reject your offer. I have lots of things to do, so thank you for asking. #name: Miki
 ->ending_Rikky
 
 ===ending_Rikky===
@@ -173,11 +173,11 @@ Hm, hm, hm... #name: Mikaela
 Something is wrong? #name: Miki
 No, I'm just trying to figure out how you do it better with each time~ #name: Mikaela
 Thanks, Mika. #name : Miki
-I wanted to ask is it true, that my Zackie died? #name: Mikaela
+I wanted to ask is it true that my Zackie died? #name: Mikaela
 Yeah, shot in a head. #name: Miki
 You are pretty chill when you talk about it. #name: Mikaela
 Every person that have come today asked me about this... um situation. So I cannot be emotional every time I talk about it. #name: Miki
-Understandable. Oh... It was a mistake to give him those crystals in advance. I didn't got my money back. #name: Mikaela
+Got it. Oh... It was a mistake to give him those crystals in advance. I didn't got my money back. #name: Mikaela
 As it is. #name: Miki
 ->ending_Mikaela
 
@@ -204,12 +204,12 @@ You too, Mika. #name: Miki
 ->detective
 
 ===detective===
-Good evening, miss. I'm detective and I'm responsible for investigation of a bar crime. My name is Jonhovan. #name: Johnovan
-I would like to ask you some question if you don't mind. #name: Jonhovan
+Good evening, miss. I'm detective and I'm responsible for investigation of a bar crime. My name is Johnovan. #name: ?
+I would like to ask you some question if you don't mind. #name: Johnovan
 Nice to meet you, Jonhovan. #name: Miki
 It's not hard to answer, so what is the first question? #name: Miki
-Well... Before I start, I want to warn you that EVERY your word can have an impact on the case. So, first question: #name: Jonhovan
-1. Who do you think Zack had the closest relationship with among the regular customers?#name: Jonhovan
+Well... Before I start, I want to warn you that EVERY your word can have an impact on the case. So, first question: #name: Johnovan
+1. Who do you think Zack had the closest relationship with among the regular customers?#name: Johnovan
 + John
     ~john_suspect ++
     ->second_question
@@ -223,7 +223,7 @@ Well... Before I start, I want to warn you that EVERY your word can have an impa
     ~neutral_suspect ++
     ->second_question
 ===second_question===
-2. Did any of the customers behave strangely? #name: Jonhovan
+2. Did any of the customers behave strangely? #name: Johnovan
 + John
     ~john_suspect ++
     ->third_question
@@ -238,7 +238,7 @@ Well... Before I start, I want to warn you that EVERY your word can have an impa
     ->third_question
     
 ===third_question===
-3. Did Zack owe anything to anyone? #name: Jonhovan
+3. Did Zack owe anything to anyone? #name: Johnovan
 + John
     ~john_suspect ++
     ->fourth_question
@@ -253,7 +253,7 @@ Well... Before I start, I want to warn you that EVERY your word can have an impa
     ->fourth_question
     
 ===fourth_question===
-4. Do you think Zack had a bad relationship with someone?
+4. Do you think Zack had a bad relationship with someone? #name: Johnovan
 + John
     ~john_suspect ++
     ->fifth_question
@@ -263,12 +263,12 @@ Well... Before I start, I want to warn you that EVERY your word can have an impa
 + Mikaela
     ~mikaela_suspect ++
     ->fifth_question
-+ He didn't had bad relationship with anyone
++ He didn't had bad relationship with anyone.
     ~neutral_suspect ++
     ->fifth_question
     
 ===fifth_question===
-5. Which customer seems the most suspicious?
+5. Which customer seems the most suspicious? #name: Johnovan
 + John
     ~john_suspect +=2
     ->checking
